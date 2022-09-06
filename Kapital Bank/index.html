@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kapital Bank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" href="data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <i style="z-index: 1;" class="fa-solid fa-comment-dots comment"></i>
+    <header id="header">
+        <div id="leftt">
+            <div class="left">
+                <a href="">
+<img width="60px" height="60px" src="data:image/jpeg;base64,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" alt="">
+</a>
+</div>
+            <div class="right">
+                <a href="">
+                    <h4>Kapital Bank</h4>
+                </a>
+            </div>
+        </div>
+        <div id="rightt">
+            <a href="">
+                <h6 style=" opacity: .8; color: #000; font-weight: 600; font-size: 18px; ">Fiziki şəxslər üçün</h6>
+            </a>
+            <a href="">
+                <h6 style=" opacity: .8; color: #000; font-weight: 300; ">Biznes üçün</h6>
+            </a>
+            <div id="right-a">
+            <a  class="left" href=""> <i style="color: red;" class="fa-sharp fa-solid fa-location-dot"></i></a>
+               <a  class="right" href="">
+                <h6 style=" opacity: .8; color: #000; font-weight: 300; "> Xidmət şəbəkəsi</h6>
+               </a>
+           
+        </div>
+            <a href="">
+                <h6 style=" opacity: .8; color: #000; font-weight: 300; ">EN</h6>
+            </a>
+            <a href="">
+                <h6 style=" opacity: .8; color: #000; font-weight: 300; ">RU</h6>
+            </a>
+            <a  href="">
+                <i style="  font-size: 17px;   color: red; padding:  4px ;   border-radius: 8px; border: 2px solid red; " class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+    </header>
+    <div id="kartlar">
+        <div class="kart-l">
+<a href="">KARTLAR</a>
+<a href="">KREDİTLƏR</a>
+<a href="">İPOTEKALAR</a>
+<a href="">DEPOZİTLƏR</a>
+<a href="">PUL KÖÇÜRMƏLƏRİ</a>
+<a href="">ONLAYN XİDMƏTLƏR</a>
+<a href="">KAMPANİYALAR</a>
+<a href="">FƏRDİ BANKÇILIQ</a>
+        </div>
+        <div class="kart-r">
+           <img style="z-index: 1;" width="30px" height="30px" src="https://www.kapitalbank.az/assets/static/img/menu/bblogo.png" alt=""> <h5 style=" z-index: 1; color: #fff; font-size: 17px; font-weight: 400;" >birbank</h5>
+        </div>
+    </div>
+    <div id="onlayn">
+        <div class="onlayn-l">
+            <p >Onlayn müraciətlərdə</p>
+            <p style="font-weight: 600; margin-bottom: 60px;" >Gündəlik tələbat krediti 13%-dən <br> başlayaraq!</p>
+        <a  href="">Nağd kredit sifariş et</a>
+        </div>
+        <div class="onlayn-r">
+            <div class="left">
+<img style="margin-right: 90px;" width="450px" src="https://www.kapitalbank.az/images/slider/version_77/onlayn-muracietlerde-gundelik-telebat-krediti-13-den-baslayaraq1660652868.png" alt="">
+            </div>
+            <div class="r">
+                <div class="icon1">
+                    <a href="">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                </div>
+                <div class="icon2">
+                    <a href="">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cevik">
+       <div class="c-top">
+        <p>Çevik <b> əməliyyatlar</b> </p>
+    </div>
+    <div class="c-bottom">
+        <div style="padding: 40px 2rem;" class="box">
+            <img
+            width="50px" height="60px" src="https://www.kapitalbank.az/images/home/birbank-karti.svg" alt="">
+            <p style="color: rgb(45, 44, 44); font-size: 20px;"> <b> Birbank kartı</b></p>
+            <p style=" color: rgb(69, 68, 68); font-size: 15px; margin-top: 10px; font-weight: 400;"
+            >Sifariş et</p>
+        </div>
+        <div class="box">
+            <i style=" color: rgba(255, 0, 0, 0.727); font-size: 50px;" class="fa-solid fa-sack-dollar"></i>
+            <p  style="margin-top: 20px; color: rgb(45, 44, 44); font-size: 20px;"> <b>Kredit</b> sifariş et</p> 
+        </div>
+        <div class="box">
+            <i style=" color: rgba(255, 0, 0, 0.727); font-size: 50px;" class="fa-solid fa-house"></i>
+            <p  style="margin-top: 20px; color: rgb(45, 44, 44); font-size: 20px;"> <b>İpoteka</b> sifariş et</p> 
+        </div>
+        <div class="box">
+            <i  style=" color: rgba(255, 0, 0, 0.727); font-size: 50px;" class="fa-solid fa-credit-card"></i>
+            <p  style="margin-top: 20px; color: rgb(45, 44, 44); font-size: 20px;"> <b>Debet kart</b> sifariş et</p> 
+        </div>
+        <div class="box">
+            <i style=" color: rgba(255, 0, 0, 0.727); font-size: 50px;" class="fa-solid fa-bullhorn"></i>
+            <p  style="margin-top: 20px; color: rgb(45, 44, 44); font-size: 20px;"> <b>Kampaniyalara </b>bax</p> 
+        </div>
+    </div>
+    <hr>
+    </div>
+    <div id="birbank">
+        <h2>Birbank <b>Cashback</b> </h2>
+    <p> Kartla edilən nağdsız ödənişlərə minimum 1.5%-dən başlayan keşbek, faizsiz <br> və komissiyasız taksit imkanı verən unikal bir kartdır. </p>
+    </div>
+    <div id="edv">
+        <div class="edv-left">
+            <h5>30%-dək keşbek və 2 qat ƏDV</h5>
+            <p>Bonus</p>
+            <a href="">Sifariş et</a>
+        </div>
+        <div class="edv-center">
+            <h5>pulsuz</h5>
+            <p>Kartın qiyməti</p>
+        </div>
+        <div class="edv-right">
+            <h5>63 günədək</h5>
+            <p>Güzəşt müddəti</p>
+        </div>
+        <div class="visa">
+            <img width="320px" height="330px" src="https://www.kapitalbank.az/images/cards/B/birbank-cashback-home.png?v=4" alt="">
+        </div>
+        <div class="iconn">
+             <div class="icon1">
+                <a href="">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                </div>
+                <div class="icon2">
+                    <a href="">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                </div>
+        </div>
+    </div>
+    <div id="daily">
+        <h5>Gündəlik <b> tələbat krediti </b></h5>
+        <p>30000 AZN-dək, arzularınızı reallaşdırmaq və ya ehtiyaclarınızı ödəmək üçün nağd kredit təklif edirik.</p>
+    </div>
+    <div id="money">
+        <div class="money-left">
+<img width="260px" height="300px" src="https://www.kapitalbank.az/assets/static/img/main-page/daily-loan3.png" alt="">
+        </div>
+        <div class="money-center">
+            <form class="form" action="">
+                <input style="text-align: left; width: 400px; height: 30%;" type="text" placeholder="FİN-kod">
+            </form>
+            <div id="true">
+                <div class="true-right">
+                    <a href="">
+                        <i style="font-size: 20px; color: red;
+                        " class="fa-regular fa-square-check"></i>
+                    </a>
+                </div>
+                <div class="true-left">
+                    <p style=" font-size: 14px;" >Məlumatlarımın doğruluğunu təsdiq edir, kredit öhdəliklərim <br> barədə məlumatları <a style="color: red;" class="text-light-red" href="https://www.acb.az/" tabindex="-1">AKB KR</a> -dən <br> sorğu etməyə, <a style="color: red;" class="text-light-red" href="https://www.e-gov.az/" tabindex="-1">EHP</a> -də qeydiyyatdan keçirməyə və digər məlumat bazalarından <br> məlumatlarımın toplanmasına razılığımı bildirirəm. </p>
+                </div>
+            </div>
+        </div>
+        <div class="money-right">
+            <form class="form" action="">
+                <input style=" width: 400px; height: 30%;" type="text">
+            </form>
+            <a href="">Sifariş et</a>
+        </div>
+    </div>
+    <div id="kalkulyator">
+        <div id="kalkulyator-left">
+            <h4>Kalkulyator</h4>
+            <div class="kalkulyator-a">
+                <a style="background-color: rgb(255, 63, 63); color: #fff; " href="">Kredit</a>
+                <a href="">Birbank kartı</a>
+                <a href="">Ipoteka</a>
+                <a href="">Depozit</a>
+            </div>
+            <h5>Gündəlik tələbat krediti</h5>
+            <p>Siz müştərilərimizə asanlıqla əldə edə biləcəyiniz nağd kredit təklif edirik.</p>
+        <form class="form" action="">
+            <input style=" width: 510px; height: 30%;" type="text">
+        
+        </form>
+        <form class="form" action="">
+            <input style=" width: 510px; height: 30%;" type="text">
+        </form>
+        </div>
+        <div id="kalkulyator-right">
+            <div class="box">
+                <h5>Nağd pul krediti üçün <br>
+                    aylıq ödəniş</h5>
+                    <h4>3446.12 ₼</h4>
+                    <a href="">Sifariş et</a>
+            </div>
+        </div>
+    </div>
+<div id="kredit">
+    <div id="kredit-left">
+        <div class="txt">
+        <h5>Onlayn kredit ödənişi</h5>
+        <p>Banka gəlmədən və növbələrdə vaxt <br> itirmədən kartınızla 4 addıma kredit <br> borcunuzun ödənişi.</p>
+   <div id="bottom">
+        <div class="bottom">
+    <a href="">Ödəniş et</a>
+    <i class="fa-solid fa-arrow-right"></i>
+   </div>
+</div>
+</div>
+<div class="img">
+   <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/cashPayment.png" alt="">
+    </div>
+</div>
+
+    <div id="kredit-right">
+        <div class="txt">
+            <h5>İnsan resursları</h5>
+            <p>Kapital Bankın peşəkarlar komandasına <br> qoşulmaq istəyirsinizsə, Sizi müvafiq vakansiyaya müraciət etməyə dəvət edirik. <br> Biz sizə dinamik mühitdə maraqlı və <br> perspektivli iş təklif edirik.</p>
+       <div id="bottom">
+            <div class="bottom">
+        <a href="">Daha ətraflı </a>
+        <i class="fa-solid fa-arrow-right"></i>
+       </div>
+    </div>
+    </div>
+    <div class="img">
+       <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/90789318742-min.png" alt="">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div id="xeber">
+    <div id="top">
+        <div class="left">
+            <h4>Xəbərlər</h4>
+            <div class="icon">
+                <a href="">Bütün xəbərlər  </a>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+         
+        </div>
+        <hr style="margin-top: 20px; border: 1.5px solid #fff;background-color: rgba(234, 234, 234, 0.9);">
+        
+        <div class="right">
+   
+    <div id="bottom">
+        
+        <div id="box">
+            <div class="math">
+                <h5  style=" color: #000;  padding: 10px; border: 1.5px solid red; border-radius:100% ; width: 50px; font-size: 24px; text-align: center; height: 50px; font-weight: 300;color: rgb(31, 31, 31);">02</h5>
+                <p style="margin-top: 7px;">Sentyabr</p>
+            </div>
+            <div class="text">
+                <p>“Qırmızı Ürəklər” 200 <br> kiloqrama yaxın batareya <br> topladı</p>
+            </div>
+        </div>
+        <div id="box">
+            <div class="math">
+                <h5 style="padding: 10px; border: 1.5px solid red; border-radius:100% ; width: 50px; font-size: 24px; text-align: center; height: 50px; font-weight: 300;color: rgb(31, 31, 31);">31</h5>
+                <p style="margin-top: 7px;">Avqust</p>
+            </div>
+            <div class="text">
+                <p>Birbank taksit kart sahibləri <br> daha çox keşbek qazanacaqlar</p>
+            </div>
+        </div>
+        <div id="box">
+            <div class="math">
+                <h5 style="padding: 10px; border: 1.5px solid red; border-radius:100% ; width: 50px; font-size: 24px; text-align: center; height: 50px; font-weight: 300;color: rgb(31, 31, 31);">30</h5>
+                <p style="margin-top: 7px;">Avqust</p>
+            </div>
+            <div class="text">
+                <p>Kapital Bank Hüseyn Cavid <br> filialını açdı</p>
+            </div>
+        </div>
+        <div id="box">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+</div>
+</div>
+<div id="valyuta">
+    <div id="valyuta-left">
+<h4>Valyuta <b> kalkulyatoru </b></h4>
+<p>Bəzi filiallar üzrə fərqli məzənnələr təyin edilə bilər</p>
+    <div class="bottom">
+        <div class="txt">
+        <h5>Valyuta</h5>
+       <h5>Alış</h5>
+        <h5>Satış</h5>
+    </div>
+    <hr style="width: 39%; margin-top: 10px;  background-color: rgb(226, 226, 226); border:.7px solid rgb(226, 226, 226) ;border-radius: 5px;">
+ 
+    </div>
+    <div class="bottom">
+        <div class="txt">
+        <h5 style="font-size: 25px; color: rgb(69, 69, 69); " >USD</h5>
+       <h5 style="font-size: 25px; color: rgb(69, 69, 69);">1.697</h5>
+        <b><h5 style="font-size: 25px; color: rgb(69, 69, 69); font-weight: bold; ">1.702</h5></b>
+    </div>
+    <hr style="width: 39%; margin-top: 10px;  background-color: rgb(226, 226, 226); border:.7px solid rgb(226, 226, 226) ;border-radius: 5px;">
+ 
+    </div>
+    <div class="bottom">
+        <div class="txt">
+        <h5 style="font-size: 25px; color: rgb(69, 69, 69);" >EUR</h5>
+       <h5 style="font-size: 25px; color: rgb(69, 69, 69);" >1.674</h5>
+       <b><h5 style="font-size: 25px; color: rgb(69, 69, 69); font-weight: bold;" >1.724</h5></b>
+    </div>
+   
+ 
+    </div>
+    <div style="margin-top: 37px;"  >
+        <a style="font-size: 19px; color: rgb(255, 79, 79);margin-top: 15px;" href="">Daha ətraflı </a>
+        <i style="font-size: 19px; color: red;" class="fa-solid fa-arrow-right"></i>
+       </div>
+</div>
+    <div id="valyuta-right">
+      <div class="all">
+        <div id="box-bottom">
+            <div class="bottom-l">
+                <a href="">
+                    <h5>Mən satıram</h5>
+                </a>
+            </div>
+            <div class="bottom-r">
+                <a href="">
+                    <h5>Mən alıram</h5>
+                </a>
+            </div>
+        </div>
+        <form class="form" action="">
+            <input style=" width: 510px; height: 30%;" type="text">
+        
+        </form>
+        <p style="text-align: center; color: rgb(85, 85, 85);" >Məbləği daxil edin</p>
+        <hr style="width: 99%; margin-top: 10px;  background-color: rgb(226, 226, 226); border:.7px solid rgb(226, 226, 226) ;border-radius: 5px;">
+        <div id="usd">
+            <b><h4 style="font-size: 25px; font-weight: 500;" >58.93</h4></b>
+            <h5 style=" color: rgb(71, 71, 71); font-size: 25px; font-weight: 200;">USD</h5>
+        </div>
+        <hr style="width: 99%; margin-top: 10px;  background-color: rgb(226, 226, 226); border:.7px solid rgb(226, 226, 226) ;border-radius: 5px;">
+        <div id="usd">
+            <b><h4 style="font-size: 25px; font-weight: 500;" >59.74</h4></b>
+            <h5 style=" color: rgb(71, 71, 71); font-size: 25px; font-weight: 200;">EUR</h5>
+        </div>
+    </div>
+    
+    </div>
+</div>
+</div>
+
+<div id="last">
+    <div id="part">
+        
+        <h5>Kapital Bank</h5>
+   
+        
+        <div class="part-a">
+        <a href="">Bank haqqında</a>
+    </div>
+     <div class="part-a">
+        <a href="">İnsan resursları</a>
+    </div>
+    <div class="part-a">
+        <a href="">Xidmət şəbəkəsi</a>
+    </div>
+    <div class="part-a">
+        <a href="">Birbank</a>
+    </div>
+    <div class="part-a">
+        <a href="">Xəbərlər</a>
+    </div>
+    <div class="part-a">
+        <a href="">Təklif və şikayətlər</a>
+    </div>
+</div>
+    
+    <div id="part">
+        <h5>Məhsullar</h5>
+        
+        <div class="part-a">
+        <a href="">Kartlar</a>
+    </div>
+     <div class="part-a">
+        <a href="">Kreditlər</a>
+    </div>
+    <div class="part-a">
+        <a href="">Depozitlər</a>
+    </div>
+    <div class="part-a">
+        <a href="">Sığorta</a>
+    </div>
+    <div class="part-a">
+        <a href="">Pul köçürmələri</a>
+    </div>
+    <div class="part-a">
+        <a href="">Fərdi Bankçılıq</a>
+    </div>
+    <div class="part-a">
+        <a href="">Onlayn Xidmətlər</a>
+    </div>
+</div>
+    
+<div id="part">
+        
+    <h5>Çevik keçidlər</h5>
+
+    
+    <div class="part-a">
+    <a href="">Birbank kartı sifariş et</a>
+</div>
+ <div class="part-a">
+    <a href="">Kredit sifariş et</a>
+</div>
+<div class="part-a">
+    <a href="">Debet kart sifariş et</a>
+</div>
+<div class="part-a">
+    <a href="">Onlayn ödənişlər</a>
+</div>
+
+</div>
+<div id="part">
+        
+    <h5>Digər</h5>
+
+    
+    <div class="part-a">
+    <a href="">Onlayn növbə</a>
+</div>
+ <div class="part-a">
+    <a href="">Tariflər</a>
+</div>
+<div class="part-a">
+    <a href="">Necə etməli</a>
+</div>
+<div class="part-a">
+    <a href="">FAQ</a>
+</div>
+
+</div>
+    <div id="part">
+      <h5 style="text-align: center;">Birbank tətbiqini yükləmək üçün <br>QR-kodu oxudun.</h5>
+    <img style="margin-top: 20px; margin-left: 52px;" src="https://www.kapitalbank.az/assets/static/img/qr-code.svg" alt="">
+<div id="bottom">
+   <a href="">
+    <div class="box">
+        <div class="left">
+            <img src="https://www.kapitalbank.az/assets/static/img/play-store.svg" alt="">
+        </div>
+        <div class="right">
+            <p> <strong>Google Play</strong> <br> Mobil tətbiqi yüklə </p>
+        </div>
+    </div>
+   </a>
+   <a href="">
+    <div class="box">
+        <div class="left">
+            <img src="https://www.kapitalbank.az/assets/static/img/app-store.svg" alt="">
+        </div>
+        <div class="right">
+            <p> <strong>App Store <br></strong>  Mobil tətbiqi yüklə </p>
+        </div>
+    </div>
+   </a>
+   <a href="">
+    <div class="box">
+        <div class="left">
+            <img src="https://www.kapitalbank.az/assets/static/img/app-gallery.svg" alt="">
+        </div>
+        <div class="right">
+            <p> <strong>App Gallery <br></strong> Mobil tətbiqi yüklə </p>
+        </div>
+    </div>
+   </a>
+  
+
+</div>
+
+</div>
+
+</div>
+<div id="last-bottom">
+    <div class="lr">
+        <a href="">
+    <div class="left">
+        <i style="color: red;" class="fa-solid fa-phone"></i>
+    </div>
+    <div class="right">
+        <h4>196</h4>
+    </div>
+</a>
+</div>
+
+    <div id="icon">
+        <div class="icon-a">
+<a href="">
+    <i   style="font-size: 21px; color: #fff; margin-left: 30px;" class="fa-brands fa-facebook"></i>
+</a>
+<a href="">
+    <i style="font-size: 21px; color: #fff; margin-left: 30px;" class="fa-brands fa-facebook-messenger"></i>
+</a>
+<a href="">
+    <i style="font-size: 21px; color: #fff; margin-left: 30px;" class="fa-brands fa-twitter"></i>
+</a>
+<a href="">
+    <i style="font-size: 21px; color: #fff; margin-left: 30px;" class="fa-brands fa-instagram"></i>
+</a>
+<a href="">
+    <i style="font-size: 21px; color: #fff; margin-left: 30px;" class="fa-brands fa-youtube"></i>
+</a>
+
+</div>
+
+    
+</div>
+</div>
+<div id="hr">
+    <hr style=" border: .7px solid rgb(86, 86, 86);background-color: rgba(87, 87, 87, 0.9); width: 85%; margin-left: 90px;">
+</div>
+<footer id="footer">
+    <div id="left">
+       <p>© 2022 «Kapital Bank» ASC. Bütün hüquqlar qorunur.</p> 
+    </div>
+    <div style="display: flex; justify-content: space-between; " id="rl">
+    <div  id="right">
+       <a href="">
+        <div class="box">
+            <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/93817465.png" alt="">
+        </div>
+       </a>
+       <a href="">
+        <div class="box">
+            <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/aesf-logo.png" alt="">
+        </div>
+       </a>
+       <a href="">
+        <div class="box">
+            <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/info.png" alt="">
+        </div>
+       </a>
+       <a href="">
+        <div class="box">
+            <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/msp.png" alt="">
+        </div>
+       </a>
+    </div>
+    
+</div>
+</footer>
+</body>
+</html>

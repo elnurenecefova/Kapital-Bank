@@ -1,0 +1,749 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.comment {
+  color: #fff;
+  background-color: rgb(218, 75, 75);
+  padding: 15px;
+  font-size: 30px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.619);
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  background-color: #fff;
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #leftt {
+  align-items: center;
+  display: flex;
+}
+#header #leftt .right a h4 {
+  font-size: 30px;
+  color: rgb(131, 1, 1);
+}
+#header #rightt {
+  display: flex;
+}
+#header #rightt a {
+  margin-right: 20px;
+}
+#header #rightt a h6 {
+  font-size: 16px;
+}
+#header #rightt #right-a {
+  margin-right: 20px;
+  display: flex;
+}
+
+#kartlar {
+  padding: 1rem 4rem;
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#kartlar .kart-l {
+  display: flex;
+}
+#kartlar .kart-l a {
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: 200;
+  color: black;
+}
+#kartlar .kart-r {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  opacity: 0.6;
+  padding: 4px;
+  width: 96px;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+#kartlar .kart-r:hover {
+  background-color: red;
+  opacity: 1;
+}
+
+#onlayn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 3rem 9rem;
+  background-color: rgb(218, 218, 218);
+}
+#onlayn .onlayn-l p {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: rgb(51, 50, 50);
+}
+#onlayn .onlayn-l a {
+  background-color: red;
+  padding: 20px 3rem;
+  border-radius: 9px;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.7s;
+}
+#onlayn .onlayn-l a:hover {
+  opacity: 1;
+}
+#onlayn .onlayn-r {
+  display: flex;
+}
+#onlayn .onlayn-r .left {
+  transition: 0.6s;
+}
+#onlayn .onlayn-r .left:hover {
+  transform: scale(1.1);
+}
+#onlayn .onlayn-r .r {
+  display: flex;
+  margin-top: 230px;
+}
+#onlayn .onlayn-r .r .icon1 {
+  margin-right: 20px;
+}
+#onlayn .onlayn-r .r .icon1 i {
+  padding: 7px 10px;
+  border-radius: 17px;
+  background-color: #fff;
+  color: gray;
+  transition: 0.3s;
+}
+#onlayn .onlayn-r .r .icon1 i:hover {
+  color: #000;
+}
+#onlayn .onlayn-r .r .icon2 i {
+  padding: 7px 10px;
+  border-radius: 17px;
+  background-color: #fff;
+  color: gray;
+  transition: 0.3s;
+}
+#onlayn .onlayn-r .r .icon2 i:hover {
+  color: #000;
+}
+
+#cevik {
+  padding: 2rem 6rem;
+  background-color: rgb(245, 243, 243);
+}
+#cevik p {
+  font-size: 35px;
+}
+#cevik .c-bottom {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+#cevik .c-bottom .box {
+  border-radius: 15px;
+  background-color: #fff;
+  margin-right: 20px;
+  padding: 40px 2rem;
+  transition: 0.6s;
+}
+#cevik .c-bottom .box:hover {
+  transform: scale(1.1);
+}
+#cevik hr {
+  margin-top: 50px;
+  width: 110px;
+  margin-left: 46%;
+}
+
+#birbank {
+  padding: 30px 7rem;
+  background-color: rgb(245, 243, 243);
+}
+#birbank h2 {
+  font-size: 37px;
+  margin-top: 40px;
+  font-weight: 400;
+  color: rgb(39, 38, 38);
+}
+#birbank p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgb(66, 65, 65);
+}
+
+#edv {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(212, 212, 212);
+  padding: 17px 7rem;
+  position: relative;
+}
+#edv .edv-left h5 {
+  color: rgba(255, 41, 41, 0.853);
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+#edv .edv-left p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+#edv .edv-left a {
+  background-color: rgb(255, 0, 0);
+  padding: 18px 6rem;
+  border-radius: 9px;
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.7s;
+}
+#edv .edv-left a:hover {
+  opacity: 1;
+}
+#edv .edv-center {
+  margin-right: 50px;
+}
+#edv .edv-center h5 {
+  color: rgba(255, 41, 41, 0.853);
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+#edv .edv-center p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+#edv .edv-right {
+  margin-right: 90px;
+}
+#edv .edv-right h5 {
+  color: rgba(255, 41, 41, 0.853);
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+#edv .edv-right p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+#edv .visa {
+  position: absolute;
+  right: 145px;
+  bottom: 0;
+  margin-left: 30px;
+}
+#edv .iconn {
+  display: flex;
+  margin-top: 150px;
+}
+#edv .iconn .icon1 {
+  margin-right: 20px;
+}
+#edv .iconn .icon1 i {
+  padding: 7px 10px;
+  border-radius: 17px;
+  background-color: #fff;
+  color: gray;
+  transition: 0.3s;
+}
+#edv .iconn .icon1 i:hover {
+  color: #000;
+}
+#edv .iconn .icon2 i {
+  padding: 7px 10px;
+  border-radius: 17px;
+  background-color: #fff;
+  color: gray;
+  transition: 0.3s;
+}
+#edv .iconn .icon2 i:hover {
+  color: #000;
+}
+
+#daily {
+  padding: 20px;
+  margin-left: 35%;
+}
+#daily h5 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: rgb(51, 50, 50);
+}
+#daily p {
+  font-size: 18px;
+  color: rgb(51, 50, 50);
+}
+
+#money {
+  background-color: rgb(237, 237, 237);
+  padding: 40px 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#money .money-left {
+  position: absolute;
+  left: 145px;
+  margin-bottom: 170px;
+  margin-right: 600px;
+}
+#money .money-center {
+  margin-left: 300px;
+}
+#money .money-center .form input {
+  padding: 20px 10px;
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  opacity: 0.7;
+  border: none;
+  border-radius: 9px;
+}
+#money .money-center #true {
+  margin-top: 30px;
+  display: flex;
+}
+#money .money-center #true .true-right {
+  margin-right: 14px;
+}
+#money .money-right .form input {
+  padding: 20px 10px;
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  opacity: 0.7;
+  border: none;
+  border-radius: 9px;
+  margin-bottom: 60px;
+}
+#money .money-right a {
+  margin-top: 50px;
+  background-color: rgb(255, 0, 0);
+  padding: 18px 9.7rem;
+  border-radius: 9px;
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.7s;
+}
+#money .money-right a:hover {
+  opacity: 1;
+}
+
+#kalkulyator {
+  padding: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+#kalkulyator #kalkulyator-left h4 {
+  font-size: 39px;
+  margin-bottom: 17px;
+  color: rgb(35, 35, 35);
+}
+#kalkulyator #kalkulyator-left .kalkulyator-a {
+  display: flex;
+  margin-bottom: 37px;
+}
+#kalkulyator #kalkulyator-left .kalkulyator-a a {
+  padding: 10px 40px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 10px;
+  margin-right: 15px;
+  font-size: 17px;
+  color: rgb(64, 64, 64);
+  transition: 0.6s;
+}
+#kalkulyator #kalkulyator-left .kalkulyator-a a:hover {
+  background-color: rgb(255, 63, 63);
+  color: #fff;
+}
+#kalkulyator #kalkulyator-left h5 {
+  font-size: 26px;
+  margin-bottom: 17px;
+  color: rgb(40, 40, 40);
+}
+#kalkulyator #kalkulyator-left p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+#kalkulyator #kalkulyator-left .form input {
+  padding: 20px 10px;
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  opacity: 0.7;
+  border: none;
+  border-radius: 9px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(169, 169, 169);
+}
+#kalkulyator #kalkulyator-right {
+  margin-top: 130px;
+  text-align: center;
+}
+#kalkulyator #kalkulyator-right .box {
+  background-color: #fff;
+  padding: 27px 20px;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 9px;
+}
+#kalkulyator #kalkulyator-right .box h5 {
+  font-size: 25px;
+  color: rgb(45, 45, 45);
+}
+#kalkulyator #kalkulyator-right .box h4 {
+  margin-top: 20px;
+  font-size: 47px;
+  color: rgb(253, 57, 57);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+#kalkulyator #kalkulyator-right .box a {
+  background-color: red;
+  padding: 20px 8rem;
+  border-radius: 9px;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.7s;
+}
+#kalkulyator #kalkulyator-right .box a:hover {
+  opacity: 1;
+}
+
+#kredit {
+  display: flex;
+  justify-content: space-between;
+}
+#kredit #kredit-left {
+  background-color: rgb(238, 238, 238);
+  width: 49%;
+  padding: 40px 4rem;
+  border-radius: 9px;
+  display: flex;
+}
+#kredit #kredit-left .txt h5 {
+  margin-top: 40px;
+  font-size: 33px;
+  margin-bottom: 7px;
+  color: rgb(46, 46, 46);
+}
+#kredit #kredit-left .txt p {
+  margin-top: 20px;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+#kredit #kredit-left .txt .bottom {
+  display: flex;
+  align-items: center;
+}
+#kredit #kredit-left .txt .bottom a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: rgb(253, 45, 45);
+}
+#kredit #kredit-left .txt .bottom a:hover {
+  color: rgb(86, 2, 2);
+}
+#kredit #kredit-left .txt .bottom i {
+  color: red;
+}
+#kredit #kredit-left .txt .bottom i:hover {
+  color: rgb(86, 2, 2);
+}
+#kredit #kredit-left .img img {
+  height: 270px;
+  width: 250px;
+}
+
+#kredit-right {
+  background-color: rgb(255, 37, 37);
+  width: 49%;
+  padding: 40px 4rem;
+  border-radius: 9px;
+  display: flex;
+}
+#kredit-right .txt h5 {
+  margin-top: 40px;
+  font-size: 37px;
+  margin-bottom: 7px;
+  color: rgb(46, 46, 46);
+  color: #fff;
+}
+#kredit-right .txt p {
+  margin-top: 20px;
+  font-size: 15px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+#kredit-right .txt .bottom {
+  display: flex;
+  align-items: center;
+}
+#kredit-right .txt .bottom a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #fff;
+}
+#kredit-right .txt .bottom i {
+  color: #fff;
+}
+#kredit-right .img img {
+  height: 270px;
+  width: 250px;
+}
+
+#xeber {
+  margin-top: 20px;
+}
+#xeber #top {
+  padding: 6rem 8rem;
+  background-color: rgb(207, 207, 207);
+}
+#xeber #top .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#xeber #top .left h4 {
+  font-size: 37px;
+  color: rgb(29, 28, 28);
+}
+#xeber #top .left a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: red;
+  transition: 0.5s;
+}
+#xeber #top .left a:hover {
+  color: rgb(123, 1, 1);
+}
+#xeber #top .left i {
+  color: red;
+}
+#xeber #top .right #bottom {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+#xeber #top .right #bottom #box {
+  align-items: center;
+  display: flex;
+}
+#xeber #top .right #bottom #box:hover {
+  transition: 0.7s;
+}
+#xeber #top .right #bottom #box:hover .text p {
+  color: red;
+}
+#xeber #top .right #bottom #box:hover h5 {
+  background-color: red;
+  color: #fff;
+}
+#xeber #top .right #bottom #box .text p {
+  margin-left: 30px;
+  font-size: 19px;
+  color: rgb(66, 66, 66);
+}
+#xeber #top .right #bottom i {
+  font-size: 25px;
+  border-radius: 17px;
+  color: gray;
+  transition: 0.3s;
+}
+#xeber #top .right #bottom i:hover {
+  color: #000;
+}
+
+#valyuta {
+  padding: 4rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+#valyuta #valyuta-left h4 {
+  font-size: 35px;
+  color: rgb(53, 53, 53);
+  font-weight: 400;
+}
+#valyuta #valyuta-left p {
+  margin-top: 13px;
+  font-size: 15px;
+  color: rgb(94, 94, 94);
+}
+#valyuta #valyuta-left .bottom {
+  margin-top: 40px;
+}
+#valyuta #valyuta-left .bottom .txt {
+  display: flex;
+}
+#valyuta #valyuta-left .bottom .txt h5 {
+  font-size: 19px;
+  margin-right: 150px;
+  font-weight: 400;
+  color: rgb(90, 90, 90);
+}
+#valyuta #valyuta-right .all {
+  background-color: rgb(209, 209, 209);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+#valyuta #valyuta-right .all #box-bottom {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+}
+#valyuta #valyuta-right .all #box-bottom .bottom-l {
+  background-color: rgb(224, 224, 224);
+  padding: 9px 40px;
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: 0.6s;
+  margin-top: 4px;
+}
+#valyuta #valyuta-right .all #box-bottom .bottom-l:hover {
+  background-color: red;
+}
+#valyuta #valyuta-right .all #box-bottom .bottom-l a h5 {
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+}
+#valyuta #valyuta-right .all #box-bottom .bottom-r {
+  background-color: rgb(255, 95, 95);
+  padding: 13px 40px;
+  border-radius: 10px;
+}
+#valyuta #valyuta-right .all #box-bottom .bottom-r a h5 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+}
+#valyuta #valyuta-right .all .form {
+  margin-top: 20px;
+}
+#valyuta #valyuta-right .all .form input {
+  padding: 20px 10px;
+  font-size: 16px;
+  text-align: left;
+  color: #000;
+  opacity: 0.7;
+  border: none;
+  border-radius: 9px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(169, 169, 169);
+}
+#valyuta #valyuta-right .all #usd {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#last {
+  padding: 6rem;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  justify-content: space-between;
+}
+#last #part h5 {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+#last #part .part-a {
+  margin-top: 15px;
+}
+#last #part .part-a a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 100;
+  transition: 0.6s;
+}
+#last #part .part-a a:hover {
+  color: rgb(255, 67, 67);
+}
+#last #part #bottom {
+  margin-top: 20px;
+}
+#last #part #bottom .box {
+  display: flex;
+  align-items: center;
+  padding: 4px 3px;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#last #part #bottom .box .left {
+  margin-right: 10px;
+}
+#last #part #bottom .box .right p {
+  color: #000;
+}
+
+#last-bottom {
+  background-color: rgb(46, 46, 46);
+  padding: 20px 6rem;
+  display: flex;
+  align-items: center;
+}
+#last-bottom .lr {
+  margin-bottom: 30px;
+}
+#last-bottom .lr a {
+  padding: 7px;
+  border: 1px solid red;
+  width: 70px;
+  display: flex;
+  border-radius: 6px;
+  margin-right: 50px;
+}
+#last-bottom .lr a .right h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-left: 7px;
+}
+#last-bottom #icon .icon-a {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#hr {
+  padding: 2px;
+  background-color: rgb(46, 46, 46);
+}
+
+#footer {
+  background-color: rgb(46, 46, 46);
+  padding: 40px 5.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer #left p {
+  color: #fff;
+}
+#footer #right {
+  display: flex;
+  align-items: center;
+}
+#footer #right a {
+  margin-right: 20px;
+}/*# sourceMappingURL=style.css.map */
